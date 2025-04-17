@@ -1,0 +1,188 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add a New Car</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #444;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Add a New Car</h2>
+    
+    <form action="adminupdatecar" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>Make:</label>
+            <input type="text" name="make" required >
+        </div>
+        
+        <div class="form-group">
+            <label>Model:</label>
+            <input type="text" name="model" required>
+        </div>
+        
+        <div class="form-group">
+    <label>Upload Car Image:</label>
+    <input type="file" name="carImage" >
+       </div>
+        
+        <div class="form-group">
+            <label>Year:</label>
+            <input type="number" name="year" required>
+        </div>
+
+        <div class="form-group">
+            <label>Variant:</label>
+            <input type="text" name="variant" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Mileage (km/l):</label>
+            <input type="number" name="mileage">
+        </div>
+        
+        <div class="form-group">
+            <label>Fuel Type:</label>
+            <select name="fuelType">
+                <option>Petrol</option>
+                <option>Diesel</option>
+                <option>Electric</option>
+                <option>Hybrid</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>Transmission Type:</label>
+            <select name="transmissionType">
+                <option>Manual</option>
+                <option>Automatic</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>Price:</label>
+            <input type="number" name="price">
+        </div>
+        
+        <div class="form-group">
+            <label>Color:</label>
+            <input type="text" name="color">
+        </div>
+        
+        <div class="form-group">
+            <label>Description:</label>
+            <input type="text" name="description">
+        </div>
+        
+       <div class="form-group">
+       <label>Status:</label>
+          <select name="status">
+        <option value="Available">Available</option>
+        <option value="Sold">Sold</option>
+          </select>
+        </div> 
+        <div class="form-group">
+            <label>Registration Number:</label>
+            <input type="text" name="registrationNum">
+        </div>
+        
+        <div class="form-group">
+            <label>Registration Year:</label>
+            <input type="number" name="registrationYear">
+        </div>
+        
+        <div class="form-group">
+            <label>Insurance:</label>
+            <input type="text" name="insurance">
+        </div>
+        
+        <div class="form-group">
+            <label>Seats:</label>
+            <input type="number" name="seats">
+        </div>
+        
+        <div class="form-group">
+            <label>Kms Driven:</label>
+            <input type="number" name="kmsDriven">
+        </div>
+        
+        <div class="form-group">
+            <label>RTO:</label>
+            <input type="text" name="RTO">
+        </div>
+        
+        <div class="form-group">
+            <label>Ownership:</label>
+            <input type="text" name="OwnerShip">
+        </div>
+        
+        <div class="form-group">
+            <label>Engine Displacement:</label>
+            <input type="text" name="engineDisplacement">
+        </div>
+        
+        <div class="form-group">
+            <label>Number of Air Bags:</label>
+            <input type="number" name="NoOfAirBags">
+        </div>
+        
+        <button type="submit" class="btn-submit">Save Car</button>
+    </form>
+</div>
+
+</body>
+</html>
